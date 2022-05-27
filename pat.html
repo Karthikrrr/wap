@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body?
+<form>
+name<input type="textbox" id="uid" name="uid"><br>
+password<input type="password" id="pasw" name="pasw">
+<input type="submit" onclick="check(this.form)" value="submit">
+</form>
+<script>
+function check(form)
+{
+var pazz=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^!@^])[a-zA-Z0-9!@$!%%#!@$]{8,16}$/;
+var bye=/^(?=.*[0-9])(?=.*[!@#$%^*])[a-zA-Z0-9!@#$%^*]{8,}$/
+var pass=document.getElementById("pasw").value;
+if(pazz.test(pass))
+{
+alert("look");
+document.write(Date());
+document.body.style.backgroundColor="red";
+}else
+{
+alert("bad")
+}
+}
+</script>
+</body>

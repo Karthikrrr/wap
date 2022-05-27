@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+function func()
+{
+student=[
+{
+"name":"mohan",
+"usn":"12"
+},{
+"name":"rohit",
+"usn":"21"
+}
+]
+
+tablebody='<table border="1"><tr><th>name</th><th>usn</th></tr>';
+
+student.forEach(function(p)
+{
+tablebody+="<tr><td>"+p.name+"</td><td>"+p.usn+"</td></td>"
+});
+document.getElementById("come").innerHTML=tablebody;
+}
+</script>
+</head>
+<body>
+	<input type="button" onclick="func()" value="click me">
+	<p id="come" >
+	</p>
+</body>
+</html>

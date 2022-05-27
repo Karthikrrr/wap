@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function pri()
+{
+var student=[
+{"name":"mohan",
+"usn":"31"},
+{"rohit":"21",
+"usn":"21"
+}
+]
+
+tablebody='<table border="1"><tr><td>"name"</td><td>"usn"</td></tr>';
+
+student.forEach(function(p)
+{
+tablebody+="<tr><td>"+p.name+"</td><td>"+p.usn+"</td></tr>";
+});
+document.getElementById("boss").innerHTML=tablebody;
+}
+</script>
+<input type="button" onclick="pri()" value="click">
+<p id="boss"></p>
+
+</body>
+</html>

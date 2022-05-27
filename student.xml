@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8">
+<student-details>
+<student>
+<name>mohan</name>
+<usn>21</usn>
+</student>
+<student>
+<name>rohit</name>
+<usn>312</usn>
+</student>
+</student-details>

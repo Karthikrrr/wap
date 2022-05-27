@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<script>
+function getti(){
+var bro=XMLHttpRequest();
+bro.getreadystatechange=function()
+{
+if(this.readyState==4 && this.readyState==200)
+{
+myfun(this)
+}else{
+alert("bad")
+}};
+bro.open("GET","student.xml",true)
+bro.send()
+}
+myfun(xml)
+{
+var i;
+var xmlDoc=xml.response;
+var table="<tr> <td> name</td><td>usn</td></tr>"
+var x=xmlDoc.getElementTagName("student-details");
+for(i=0;i<x.length;i++)
+{
+table+="<tr><td>"+x[i].getElementByTagName("name").childNodes[i].nodeValue[i]+"</td><td>"+
+		x[i].getElementByTagName("usn").childNodes[i].nodeValue[i]+"</td></tr>";
+}
+document.getElementByTagName("boss").innerHTML=table;
+}
+</script>
+<input type="button" onclick="getti()" value="click">
+<p id="boss"></p>
+</body>
+</html>
